@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pola Hidup Sehat — Untuk Anak Kuliah</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--accent:#27ae60;--muted:#6b7280;--bg:#f7faf9;--card:#ffffff}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Arial,sans-serif;margin:0;background:var(--bg);color:#0f172a;line-height:1.5}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#16a34a);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    nav a{margin-left:16px;text-decoration:none;color:var(--muted);font-weight:600}
+    .hero{display:flex;gap:28px;align-items:center;padding:24px 0}
+    .hero-left{flex:1}
+    .hero h1{font-size:28px;margin:0 0 8px}
+    .hero p{margin:0 0 16px;color:var(--muted)}
+    .btn{background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;border:none;cursor:pointer;font-weight:600}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+    .section{margin:34px 0}
+    h2{margin:0 0 12px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    ul.tips{padding-left:18px;color:var(--muted)}
+    footer{padding:18px 0;color:var(--muted);font-size:14px}
+    /* small screens */
+    @media (max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.grid-2{grid-template-columns:1fr}.hero{flex-direction:column}}
+    @media (max-width:560px){.cards{grid-template-columns:1fr}nav{display:none}.logo{width:44px;height:44px}}
+    /* small interactive elements */
+    .input, textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf0}
+    .row{display:flex;gap:12px}
+    .row > *{flex:1}
+    .muted{color:var(--muted)}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#eef9f2;color:#064e2b;font-weight:700;font-size:13px}
+    .task-list{list-style:none;padding:0;margin:0}
+    .task-list li{background:#fff;margin-bottom:8px;padding:10px;border-radius:8px;display:flex;align-items:center;justify-content:space-between}
+    .small{font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">PH</div>
+        <div>
+          <div style="font-weight:700">Pola Hidup Sehat</div>
+          <div class="muted small">Panduan sederhana untuk mahasiswa</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">Tentang</a>
+        <a href="#nutrition">Nutrisi</a>
+        <a href="#exercise">Olahraga</a>
+        <a href="#tools">Alat</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Bangun kebiasaan sehat — langkah kecil, hasil besar</h1>
+        <p>Website ini berisi panduan praktis hidup sehat untuk anak kuliah: menu hemat bergizi, rutinitas olahraga singkat, manajemen tidur, dan alat sederhana (BMI, planner) untuk membantu konsistensi.</p>
+        <div style="display:flex;gap:10px;margin-top:12px;align-items:center">
+          <button class="btn" onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'})">Gunakan Alat</button>
+          <span class="badge">Mulai dari 10 menit/hari</span>
+        </div>
+
+        <div class="cards" style="margin-top:18px">
+          <div class="card"><strong>10 Menit Olahraga</strong><div class="muted small">Latihan cepat, tanpa alat</div></div>
+          <div class="card"><strong>Menu Hemat</strong><div class="muted small">Resep sederhana bergizi</div></div>
+          <div class="card"><strong>Rutinitas Tidur</strong><div class="muted small">Cara tidur berkualitas</div></div>
+        </div>
+      </div>
+      <div style="flex:0.9">
+        <div class="card" style="padding:18px">
+          <h3 style="margin-top:0">Tantangan 7 Hari</h3>
+          <p class="muted small">Ikuti 7 hari kebiasaan: minum cukup air, 10 menit gerak, tidur lebih awal.</p>
+          <ol class="muted small">
+            <li>Hari 1: Minum 8 gelas</li>
+            <li>Hari 2: Jalan 20 menit</li>
+            <li>Hari 3: Tidur 30 menit lebih awal</li>
+          </ol>
+          <button class="btn" style="margin-top:8px" onclick="alert('Semangat! Mulai tantanganmu hari ini :)')">Ikuti Tantangan</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>Tentang Pola Hidup Sehat</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Apa itu pola hidup sehat?</h3>
+          <p class="muted">Kombinasi kebiasaan sehari-hari—diet seimbang, aktivitas fisik, tidur cukup, pengelolaan stres—yang meningkatkan kualitas hidup dan kemampuan akademik.</p>
+          <ul class="tips">
+            <li>Fokus pada konsistensi, bukan kesempurnaan.</li>
+            <li>Mulai kecil: 10 menit olahraga, 1 porsi sayur tambahan.</li>
+            <li>Catat progres untuk motivasi.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Manfaat untuk mahasiswa</h3>
+          <ul class="tips">
+            <li>Meningkatkan fokus dan memori.</li>
+            <li>Mengurangi stres dan kecemasan.</li>
+            <li>Energi lebih stabil untuk belajar & organisasi.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="nutrition" class="section">
+      <h2>Nutrisi & Menu Hemat</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Prinsip sederhana</h3>
+          <ul class="tips">
+            <li>Isi setengah piring dengan sayur & buah.</li>
+            <li>Protein: telur, tahu/tempe, ikan, ayam (sesuai kemampuan).</li>
+            <li>Karbohidrat kompleks: nasi merah, roti gandum, ubi.</li>
+            <li>Minum air cukup — target 8 gelas atau sesuai aktivitas.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Contoh menu harian (hemat)</h3>
+          <ol class="tips small">
+            <li>Pagi: Oat + pisang + kacang.</li>
+            <li>Siang: Nasi + sayur + tahu/tempe + ayam panggang.</li>
+            <li>Sore: Yogurt atau buah.</li>
+            <li>Malam: Sup sayur + karbo kecil.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="exercise" class="section">
+      <h2>Olahraga singkat & rutinitas</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>10-menit HIIT (tanpa alat)</h3>
+          <ol class="tips small">
+            <li>1 menit jumping jacks</li>
+            <li>30s istirahat</li>
+            <li>1 menit squat</li>
+            <li>1 menit plank</li>
+            <li>Ulangi siklus sesuai waktu</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>Tips konsistensi</h3>
+          <ul class="tips">
+            <li>Jadwalkan di kalender — treat as appointment.</li>
+            <li>Lakukan bersama teman untuk accountability.</li>
+            <li>Catat durasi & perasaan setelah latihan.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools" class="section">
+      <h2>Alat Praktis (BMI, Planner, & Task)</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>BMI Calculator</h3>
+          <p class="small muted">Masukkan tinggi (cm) & berat (kg).</p>
+          <div class="row" style="margin-top:8px">
+            <input id="height" class="input" type="number" placeholder="Tinggi (cm)" />
+            <input id="weight" class="input" type="number" placeholder="Berat (kg)" />
+          </div>
+          <button class="btn" style="margin-top:10px" onclick="calcBMI()">Hitung BMI</button>
+          <p id="bmiResult" class="small muted" style="margin-top:8px"></p>
+        </div>
+
+        <div class="card">
+          <h3>Daily Planner & Tasks</h3>
+          <div style="margin-bottom:8px">
+            <input id="taskInput" class="input" placeholder="Tambahkan tugas singkat (mis. olahraga 10 menit)" />
+            <button class="btn" style="margin-top:8px" onclick="addTask()">Tambah</button>
+          </div>
+          <ul id="tasks" class="task-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="sleep" class="section">
+      <h2>Sleep Hygiene</h2>
+      <div class="card">
+        <p class="muted">Kebiasaan tidur yang baik: tidur & bangun di waktu yang sama, hindari layar 30 menit sebelum tidur, kamar gelap & tenang, batasi kafein di sore/ malam.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Kontak & Sumber</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Hubungi Tim</h3>
+          <p class="muted small">Ini contoh formulir kontak (tidak mengirimkan data karena tidak ada backend). Untuk mengaktifkannya, hubungkan ke server / layanan form.</p>
+          <input class="input" placeholder="Nama" />
+          <input class="input" placeholder="Email" style="margin-top:8px" />
+          <textarea class="input" rows="4" placeholder="Pesan" style="margin-top:8px"></textarea>
+          <button class="btn" style="margin-top:8px" onclick="alert('Formulir simulasi — hubungkan ke server untuk kirim asli')">Kirim</button>
+        </div>
+        <div class="card">
+          <h3>Referensi singkat</h3>
+          <ul class="tips small">
+            <li>Pedoman gizi seimbang — adaptasi lokal</li>
+            <li>Rekomendasi aktivitas fisik: minimal 150 menit/ minggu (ringan-sedang)</li>
+            <li>Jika punya kondisi medis, konsultasi profesional kesehatan</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="muted small">© Pola Hidup Sehat — dibuat untuk mahasiswa. File ini adalah single-page static HTML. Buka di browser atau upload ke hosting (GitHub Pages / Netlify) untuk publikasi.</div>
+    </footer>
+  </div>
+
+  <script>
+    function calcBMI(){
+      const h = parseFloat(document.getElementById('height').value);
+      const w = parseFloat(document.getElementById('weight').value);
+      const out = document.getElementById('bmiResult');
+      if(!h || !w){ out.textContent = 'Masukkan tinggi dan berat yang valid.'; return; }
+      const m = h/100;
+      const bmi = w / (m*m);
+      let cat = '';
+      if(bmi < 18.5) cat = 'Kurus';
+      else if(bmi < 25) cat = 'Normal';
+      else if(bmi < 30) cat = 'Kelebihan berat';
+      else cat = 'Obesitas';
+      out.textContent = `BMI: ${bmi.toFixed(1)} — ${cat}`;
+    }
+
+    function addTask(){
+      const v = document.getElementById('taskInput').value.trim();
+      if(!v) return;
+      const ul = document.getElementById('tasks');
+      const li = document.createElement('li');
+      li.innerHTML = `<span>${escapeHtml(v)}</span><button onclick="this.parentElement.remove()" style=\"background:none;border:none;color:#ff4d4f;font-weight:700;cursor:pointer\">Hapus</button>`;
+      ul.prepend(li);
+      document.getElementById('taskInput').value = '';
+    }
+
+    function escapeHtml(unsafe){
+      return unsafe.replace(/[&<>\"]/g, function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[m];});
+    }
+
+    // small UX: keyboard add
+    document.getElementById('taskInput').addEventListener('keydown', function(e){ if(e.key==='Enter'){ addTask(); } });
+  </script>
+</body>
+</html>
